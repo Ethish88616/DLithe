@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        /* Home Section */
+        #home img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        /* Destination List */
+        #destinations ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        #destinations ul li {
+            background: #3498db;
+            color: white;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        /* Packages Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 2px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #333;
+            color: white;
+        }
+
+        /* Form Styling */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Marquee Styling */
+        marquee {
+            background: #333;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Travel Agency</h1>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destination</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#contact">Contact us</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <h1>Welcome to our Travel Agency</h1>
+    <p>Your perfect travel partner for amazing experiences!</p>
+    <img src="agency.jpg" alt="Travel Agency Image">
+</section>
+
+<!-- Destination Section -->
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+    <ul>
+        <li>Mangalore</li>
+        <li>Mumbai</li>
+        <li>Udupi</li>
+        <li>Goa</li>
+    </ul>
+</section>
+
+<!-- Packages Section -->
+<section id="packages">
+    <h2>Travel Packages</h2>
+    <p>Explore our exciting travel packages with affordable pricing.</p>
+    <table>
+        <tr>
+            <th>Package</th>
+            <th>Duration</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Mangalore</td>
+            <td>5 Days</td>
+            <td>₹5000</td>
+        </tr>
+        <tr>
+            <td>Mumbai</td>
+            <td>7 Days</td>
+            <td>₹8000</td>
+        </tr>
+        <tr>
+            <td>Udupi</td>
+            <td>3 Days</td>
+            <td>₹4000</td>
+        </tr>
+        <tr>
+            <td>Goa</td>
+            <td>2 Days</td>
+            <td>₹3000</td>
+        </tr>
+    </table>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are a trusted travel agency, providing the best deals for your dream destinations.</p>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<!-- Marquee Section -->
+<marquee direction="left" scrollamount="5" loop="infinite">
+    Thanks for contacting us! Please remember us and contact again. Happy Travelling! 🌍✈️
+</marquee>
+
+</body>
+</html>
