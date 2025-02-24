@@ -70,15 +70,23 @@
         #destinations ul {
             list-style: none;
             padding: 0;
-            text-align: center;
         }
         #destinations ul li {
             background: #3498db;
             color: white;
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px;
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
             border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #destinations ul li span {
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 5px;
         }
 
         /* Packages Table */
@@ -153,24 +161,27 @@
 <section id="home">
     <h1>Welcome to our Travel Agency</h1>
     <p>Your perfect travel partner for amazing experiences!</p>
-    <img src="agency.jpg" alt="Travel Agency Image">
+    <img src="travel.jpg" alt="Travel Agency Image">
 </section>
 
+<!-- Destination Section -->
 <!-- Destination Section -->
 <section id="destinations">
     <h2>Popular Destinations</h2>
     <ul>
-        <li>Mangalore</li>
-        <li>Mumbai</li>
-        <li>Udupi</li>
-        <li>Goa</li>
+        <li>Mangalore <span>A coastal city known for its beautiful beaches and temples.</span></li>
+        <li>Mumbai <span>The city that never sleeps, famous for Bollywood and historic sites.</span></li>
+        <li>Udupi <span>A charming town famous for its temples and authentic South Indian cuisine.</span></li>
+        <li>Goa <span>A paradise of beaches, nightlife, and Portuguese heritage.</span></li>
     </ul>
+    <center>
+        <button onclick="window.location.href='registration-form.html'">Read More</button>
+    </center>
 </section>
 
 <!-- Packages Section -->
 <section id="packages">
     <h2>Travel Packages</h2>
-    <p>Explore our exciting travel packages with affordable pricing.</p>
     <table>
         <tr>
             <th>Package</th>
@@ -198,12 +209,9 @@
             <td>₹3000</td>
         </tr>
     </table>
-</section>
-
-<!-- About Us Section -->
-<section id="about">
-    <h2>About Us</h2>
-    <p>We are a trusted travel agency, providing the best deals for your dream destinations.</p>
+    <center>
+        <button onclick="window.location.href='registration-form.html'">Read More</button>
+    </center>
 </section>
 
 <!-- Contact Us Section -->

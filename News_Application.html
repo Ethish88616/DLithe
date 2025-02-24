@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Application</title>
+    <title>NewsSync</title>
     <style>
         /* General Styles */
         body {
@@ -57,6 +57,22 @@
             text-align: center;
         }
 
+        /* Button Styling */
+        .read-more {
+            background-color: blue;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+        }
+        .read-more:hover {
+            background-color: darkblue;
+        }
+
         /* Form Styling */
         form {
             max-width: 400px;
@@ -104,7 +120,7 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h1>Welcome to News Hub</h1>
+        <h1>Welcome to NewsSync</h1>
         <p>Your daily source for the latest news and updates.</p>
     </section>
 
@@ -114,6 +130,7 @@
         <article>
             <h3>Global Summit on Climate Change</h3>
             <p>Leaders from around the world gather to discuss climate policies and global warming.</p>
+            <button class="read-more" onclick="location.href='registration-form.html'">Read More</button>
         </article>
     </section>
 
@@ -123,6 +140,7 @@
         <article>
             <h3>India Wins Cricket World Cup 2025</h3>
             <p>India defeated Australia in the final match to lift the world cup trophy.</p>
+            <button class="read-more" onclick="location.href='registration-form.html'">Read More</button>
         </article>
     </section>
 
@@ -132,6 +150,7 @@
         <article>
             <h3>New AI Chatbot Launched</h3>
             <p>The latest AI chatbot can now understand and generate human-like responses.</p>
+            <button class="read-more" onclick="location.href='registration-form.html'">Read More</button>
         </article>
     </section>
 
@@ -141,6 +160,7 @@
         <article>
             <h3>New Blockbuster Movie Released</h3>
             <p>The latest sci-fi movie breaks all box office records on its opening day.</p>
+            <button class="read-more" onclick="location.href='registration-form.html'">Read More</button>
         </article>
     </section>
 

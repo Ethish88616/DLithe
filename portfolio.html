@@ -7,11 +7,12 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
+            scroll-behavior: smooth;
         }
         
         h1, h2 {
@@ -20,12 +21,13 @@
 
         /* Navigation Bar */
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 15px;
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav ul {
             list-style: none;
@@ -41,6 +43,7 @@
             text-decoration: none;
             color: white;
             font-size: 18px;
+            transition: color 0.3s ease-in-out;
         }
         nav ul li a:hover {
             color: yellow;
@@ -48,22 +51,38 @@
 
         /* Sections */
         section {
-            padding: 40px;
+            padding: 50px;
             margin: 20px auto;
             background: white;
             border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        /* Home Section */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Profile Image */
+        #home p {
+            text-align: center;
+
+        }
         #home img {
             display: block;
             margin: 20px auto;
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 3px solid #333;
+            border: 4px solid #222;
+            transition: transform 0.3s ease-in-out;
+        }
+        #home img:hover {
+            transform: scale(1.1);
         }
 
         /* About Section */
@@ -71,29 +90,40 @@
             text-align: center;
         }
         #about button {
-            background-color: blue;
+            background-color: #007bff;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border: none;
             cursor: pointer;
             font-size: 16px;
             border-radius: 5px;
             margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
         }
         #about button:hover {
-            background-color: darkblue;
+            background-color: #0056b3;
         }
 
-        /* Skills Dropdown */
-        #skills {
-            text-align: center;
+        /* Skills Section */
+        #skills ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        #skills select {
-            padding: 8px;
-            font-size: 16px;
+        #skills ul li {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        #skills ul li:hover {
+            transform: scale(1.1);
         }
 
-        /* Form Styling */
+        /* Contact Form */
         form {
             max-width: 400px;
             margin: 0 auto;
@@ -102,87 +132,79 @@
         }
         input, textarea {
             margin-bottom: 10px;
-            padding: 8px;
+            padding: 10px;
             width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
         button {
-            background-color: blue;
+            background-color: #007bff;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border: none;
             cursor: pointer;
             font-size: 16px;
             border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
         }
         button:hover {
-            background-color: darkblue;
+            background-color: #0056b3;
         }
-
     </style>
 </head>
 <body>
 
 <h1>Portfolio</h1>
 
-<!-- Navigation Bar -->
 <nav>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#qualification">Qualification</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- Home Section -->
 <section id="home">
-    <h1>I am Ehtishamul Haq</h1>
-    <p>Information Science Engineering Student</p>
-    <p>A third-year undergraduate engineering student at Canara Engineering College, Mangalore.</p>
-    <img src="Myimage.jpg" alt="My Image">
+    <h1>Ehtishamul Haq</h1>
+    <p>Passionate Software Developer & Tech Enthusiast</p>
+    <!-- <img src="Myimage.jpg" alt="My Image"> -->
 </section>
 
-<!-- About Section -->
 <section id="about">
-    <h2>About me</h2>
-    <img src="myimage.jpg" alt="My Image">
-    <div>
-        <p>I'm a third-year ISE undergraduate, passionate about technology and an avid reader. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization.</p>
-        <p><strong>CGPA:</strong> 8.30+</p>
-        <p><strong>Projects:</strong> 4+</p>
-        <button>Download CV</button>
-    </div>
+    <h2>About Me</h2>
+    <p>I am an aspiring software developer, passionate about technology and problem-solving. I enjoy working on projects that push my limits and allow me to grow as a developer.</p>
+    <center>
+    <button>Download Resume</button>
+    </center>
 </section>
 
-<!-- Skills Section -->
 <section id="skills">
     <h2>Skills</h2>
-    <label for="skills-dropdown">Select a skill category:</label>
-    <select id="skills-dropdown">
-        <option value="programming">Programming Languages</option>
-        <option value="technical">Technical Skills</option>
-    </select>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>HTML & CSS</li>
+        <li>React.js</li>
+        <li>Django</li>
+    </ul>
 </section>
 
-<!-- Qualification Section -->
-<section id="qualification">
-    <h2>Qualification</h2>
-    <p><strong>SSLC:</strong> Nirmala Convent, Kumta (2019)</p>
-    <p><strong>PUC:</strong> Dr. AV Baliga College of Arts and Science (2021)</p>
-    <p><strong>College:</strong> Canara Engineering College, Mangalore (2021 - 2025)</p>
-</section>
-
-<!-- Projects Section -->
 <section id="projects">
     <h2>Projects</h2>
-    <p>Description of projects goes here.</p>
+    <ul>
+        <li>📝 To-Do List App</li>
+        <li>📊 Data Visualization Dashboard</li>
+        <li>🌍 Travel Booking Website</li>
+    </ul>
+    <center>
+        <button onclick="location.href='registration-form.html'">Know More</button>
+    </center>
 </section>
 
-<!-- Contact Section -->
+
 <section id="contact">
     <h2>Contact Me</h2>
     <form>
@@ -198,6 +220,21 @@
         <button type="submit">Send</button>
     </form>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const revealSection = () => {
+            sections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+                    section.classList.add("visible");
+                }
+            });
+        };
+        window.addEventListener("scroll", revealSection);
+        revealSection();
+    });
+</script>
 
 </body>
 </html>
